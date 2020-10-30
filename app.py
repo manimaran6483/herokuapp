@@ -5,7 +5,7 @@ from flask import Flask, request, jsonify, render_template, redirect, url_for, s
 import pickle
 
 app = Flask(__name__)
-model = pickle.load(open('model.pkl', 'rb'))
+model = pickle.load(open('covid_model.pkl', 'rb'))
 UPLOAD_FOLDER = '/uploads'
 STATIC_FOLDER = '/static    '
 
