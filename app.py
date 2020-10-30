@@ -1,5 +1,4 @@
 import numpy as np
-import imtools
 import os.path
 from PIL import Image
 from flask import Flask, request, jsonify, render_template, redirect, url_for, send_from_directory
@@ -9,9 +8,6 @@ app = Flask(__name__)
 model = pickle.load(open('model.pkl', 'rb'))
 UPLOAD_FOLDER = '/uploads'
 STATIC_FOLDER = '/static    '
-
-reload(imtools)
-
 
 def api(full_path):
     data = image.load_img(full_path, target_size=(50, 50, 3))
